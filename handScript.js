@@ -1,5 +1,5 @@
 const videoElement1 = document.getElementsByClassName('input_video')[0];
-const canvasElement1 = document.getElementsByClassName('hand_output_canvas')[0];
+const canvasElement1 = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx1 = canvasElement1.getContext('2d');
 
 var handData;
