@@ -2,13 +2,12 @@ const videoElement = document.getElementsByClassName('input_video')[0];
 //canvas for the AI video
 const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
-//canvas for the Game
-const gameCanvas = document.getElementsByClassName('game_canvas')[0];
-const gameCtx = gameCanvas.getContext('2d');
+
 
 const landmarkContainer = document.getElementsByClassName('landmark-grid-container')[0];
 const grid = new LandmarkGrid(landmarkContainer);
 
+var bodyData;
 function onResults(results) {
     if (!results.poseLandmarks) {
     grid.updateLandmarks([]);
@@ -37,7 +36,7 @@ function onResults(results) {
         {color: '#FF0000', lineWidth: 2});
     canvasCtx.restore();
     //console.log(results.poseLandmarks);
-
+    bodyData = results.poseLandmarks;
     grid.updateLandmarks(results.poseWorldLandmarks);
 }
 
