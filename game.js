@@ -17,15 +17,21 @@ setInterval(function(){
 
 function draw(){
     //hand data
-    handX = handData[0][0].x;
-    handY = handData[0][0].y;
+    //handX = handData[0][0].x;
+    //handY = handData[0][0].y;
+    handX = bodyData[20].x;
+    handY = bodyData[20].y;
+
     ctx.beginPath();
     ctx.arc(gameCanvas.width - (handX * gameCanvas.width), (handY * gameCanvas.height), 50, 0, 2 * Math.PI);
     ctx.stroke();
     console.log(handX);
 
-    handX = handData[1][0].x;
-    handY = handData[1][0].y;
+    //handX = handData[1][0].x;
+    //handY = handData[1][0].y;
+    handX = bodyData[19].x;
+    handY = bodyData[19].y;
+
     ctx.beginPath();
     ctx.arc(gameCanvas.width - (handX * gameCanvas.width), (handY * gameCanvas.height), 50, 0, 2 * Math.PI);
     ctx.stroke();
