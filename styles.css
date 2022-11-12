@@ -1,0 +1,13 @@
+.input_video{
+    display: none;
+}
+
+.game_canvas{
+    width:auto;
+    height: 500px;
+    background-color: antiquewhite;
+}
+
+body{
+    background-color: aqua;
+}
