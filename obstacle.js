@@ -4,17 +4,21 @@ class Obstacle{
 
     constructor(x,y){
         this.x = x;
-        this.y = 100;
+        this.y = y;
         this.type = parseInt(Math.random() * 3 + 1);
+        this.color = "black";
         switch(this.type){
             case 1: // collision
                 this.length = parseInt(Math.random() * 500 + 1);
+                this.color = "orange";
                 break;
             case 2: // jump type
                 this.length = 50;
+                this.color = "yellow";
                 break;
             case 3: //duck
                 this.length = parseInt(Math.random() * 150 + 100);
+                this.color = "pink";
                 break;
         }
         //this.length = 100;
@@ -46,12 +50,12 @@ class Obstacle{
     print(){
         //console.log("called");
         
-        ctx.fillStyle = "green";
+        ctx.fillStyle = this.color;
         //console.log((this.x - 1) * (gameCanvas.width / 3));
-        console.log(player.y-this.y);
+        //console.log(player.y-this.y);
         //console.log((gameCanvas.width / 3));
-        console.log(this.length);
-        console.log("type: " + this.type);
+        //console.log(this.length);
+        //console.log("type: " + this.type);
         ctx.fillRect((this.x - 1) * (gameCanvas.width / 3), player.y - this.y, (gameCanvas.width / 3), this.length);
     }
 

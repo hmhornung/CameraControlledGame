@@ -6,18 +6,21 @@ var obs1 = new Obstacle(2,100);
 var segment1 = new Segment(1,true,false,0);
 var segment2 = new Segment(1,false,true,1);
 
+segment1.add_obst();
+segment2.add_obst();
+
 
 setInterval(function(){
     ctx.clearRect(0,0,gameCanvas.width,gameCanvas.height);
     map.print(ctx,back_image);
     map.update();
     printAll(ctx);
-    
+    segmentHandler();
     //preDraw();
     //draw();
     //postDraw();
     // console.log(handData);
-    console.log(bodyData);
+    //console.log(bodyData);
 
     //ctx.fillStyle = "red";
     //ctx.fillRect(50,50, 100, 100);

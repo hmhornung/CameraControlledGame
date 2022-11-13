@@ -7,10 +7,21 @@ class Segment{
         this.obstacle = [];
     }
     print(){
-        this.obstacle.foreach(element => console.log(element));
+        for(var i = 0; i < 10; i++){
+            console.log(this.obstacle[i]);
+            this.obstacle[i].print();
+        }
     }
-    add_obst(obst){
-        this.obstacle.append(obst);
-        this.obstacle.append(null);
+    add_obst(){
+        this.obstacle = fillSegment(this.score);
+    }
+
+    detectAllCollision(){
+        for(var i = 0; i < 10; i++){
+            if (this.obstacle[i].getCollision()){
+                return true;
+            }
+        }
+        return false;
     }
 }
