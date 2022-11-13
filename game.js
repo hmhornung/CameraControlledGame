@@ -7,11 +7,17 @@ const ctx = gameCanvas.getContext('2d');
 setInterval(function(){
     ctx.clearRect(0,0,gameCanvas.width,gameCanvas.height);
     
+    //printAll(ctx);
+    player.update();
+    player.print(ctx);
     preDraw();
     draw();
     postDraw();
     console.log(handData);
     console.log(bodyData);
+
+    //ctx.fillStyle = "red";
+    //ctx.fillRect(50,50, 100, 100);
     
 }, 20);
 
