@@ -4,13 +4,9 @@ const canvasElement = document.getElementsByClassName('pose_output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
 
 
-const landmarkContainer = document.getElementsByClassName('landmark-grid-container')[0];
-const grid = new LandmarkGrid(landmarkContainer);
-
 var bodyData;
 function onResults(results) {
     if (!results.poseLandmarks) {
-    grid.updateLandmarks([]);
     return;
     }
 
@@ -37,7 +33,6 @@ function onResults(results) {
     canvasCtx.restore();
     //console.log(results.poseLandmarks);
     bodyData = results.poseLandmarks;
-    grid.updateLandmarks(results.poseWorldLandmarks);
 }
 
 const pose = new Pose({locateFile: (file) => {
