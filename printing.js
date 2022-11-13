@@ -1,4 +1,10 @@
+
+
+
 function printAll(ctx){
-    //ctx.fillRect(0,0,100,100);
-    //player.print(ctx);
+    
+    player.update();
+    player.print(ctx);
+    obs1.print();
+    console.log(obs1.type);
 }

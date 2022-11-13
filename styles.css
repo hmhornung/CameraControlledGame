@@ -4,7 +4,7 @@ video{
 canvas{
     width: 100%;
     height: auto;
-    display: none;
+    /* display: none; */
 }
 .game_canvas{
     width: 85%;
@@ -19,7 +19,7 @@ canvas{
     background-color: #D1D1D1;
 }
 .landmark-grid-container{
-    display: none;
+    /* display: none; */
 }
 body{
     background-color: #512888;

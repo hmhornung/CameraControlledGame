@@ -2,17 +2,16 @@
 const gameCanvas = document.getElementsByClassName('game_canvas')[0];
 const ctx = gameCanvas.getContext('2d');
 
-
+var obs1 = new Obstacle(2,100);
 
 setInterval(function(){
     ctx.clearRect(0,0,gameCanvas.width,gameCanvas.height);
     
-    //printAll(ctx);
-    player.update();
-    player.print(ctx);
-    preDraw();
-    draw();
-    postDraw();
+    printAll(ctx);
+    
+    //preDraw();
+    //draw();
+    //postDraw();
     console.log(handData);
     console.log(bodyData);
 
@@ -21,7 +20,7 @@ setInterval(function(){
     
 }, 20);
 
-function draw(){
+function draw(){ // function for drawing hand circles
     //hand data
     //handX = handData[0][0].x;
     //handY = handData[0][0].y;
