@@ -5,6 +5,7 @@ var player = {
     printX:100,//gameCanvas.width - ((gameCanvas.width / 3) * this.x),
     printY: 100,
     width: 50,
+    lives: 3,
     color: "green",
     print(ctx){
         ctx.fillStyle = this.color;

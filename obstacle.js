@@ -63,7 +63,8 @@ class Obstacle{
         if(player.x != this.x){
             return false;
         }
-        else if (player.y >= this.y+100 && player.y <= this.y + this.length + 100){
+        else if (player.y >= this.y && player.y <= this.y + this.length){
+            this.y-=1000;
             return true;
         }
     }

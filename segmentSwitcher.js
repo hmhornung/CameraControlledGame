@@ -4,6 +4,7 @@ function segmentHandler(){
     
     if(segment1.detectAllCollision() || segment2.detectAllCollision()){
         player.color= "red";
+        player.lives-=1;
     }
     if(player.y > segment2.score * 2000){
         segment1 = segment2;

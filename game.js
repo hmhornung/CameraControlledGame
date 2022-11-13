@@ -24,7 +24,10 @@ setInterval(function(){
 
     //ctx.fillStyle = "red";
     //ctx.fillRect(50,50, 100, 100);
-    
+    if(player.lives <= 0){
+        gameCanvas.style.display="none";
+        document.getElementById("you_died").style.display="block";
+    }
 }, 20);
 
 // function draw(){ // function for drawing hand circles
