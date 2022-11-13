@@ -2,10 +2,10 @@
 
 
 function printAll(ctx){
-    
+    obs1.print();
     player.update();
     player.print(ctx);
-    obs1.print();
     
-    console.log(obs1.type);
+    
+    //console.log(obs1.type);
 }

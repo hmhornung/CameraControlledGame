@@ -5,12 +5,12 @@ class Obstacle{
     constructor(x,y){
         this.x = x;
         this.y = y;
-        this.type = parseInt(Math.random() * 3 + 1);
-        this.color = "black";
+        this.type = 1//parseInt(Math.random() * 3 + 1);
+        this.color = ["purple","blue","orange","pink","yellow"];
         switch(this.type){
             case 1: // collision
                 this.length = parseInt(Math.random() * 500 + 1);
-                this.color = "orange";
+                this.color = this.color[parseInt(Math.random()*4)];
                 break;
             case 2: // jump type
                 this.length = 50;
@@ -21,7 +21,7 @@ class Obstacle{
                 this.color = "pink";
                 break;
         }
-        //this.length = 100;
+        this.length = 100;
     }
     
     // constructor(x,y,type){
@@ -65,8 +65,12 @@ class Obstacle{
         }
         else if (player.y >= this.y && player.y <= this.y + this.length){
             this.y-=1000;
+            // console.log(segment1.score)
+            
             return true;
+
         }
+        
     }
 
     

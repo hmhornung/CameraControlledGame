@@ -14,8 +14,9 @@ setInterval(function(){
     ctx.clearRect(0,0,gameCanvas.width,gameCanvas.height);
     map.print(ctx,back_image);
     map.update();
-    printAll(ctx);
     segmentHandler();
+    printAll(ctx);
+ 
     //preDraw();
     //draw();
     //postDraw();
@@ -27,6 +28,9 @@ setInterval(function(){
     if(player.lives <= 0){
         gameCanvas.style.display="none";
         document.getElementById("you_died").style.display="block";
+    }
+    if(player.color == "red"){
+        player.color = "green"
     }
 }, 20);
 
