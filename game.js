@@ -6,7 +6,8 @@ var obs1 = new Obstacle(2,100);
 
 setInterval(function(){
     ctx.clearRect(0,0,gameCanvas.width,gameCanvas.height);
-    
+    map.print(ctx,back_image);
+    map.update();
     printAll(ctx);
     
     //preDraw();
