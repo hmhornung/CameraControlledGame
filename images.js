@@ -1,2 +1,2 @@
 var back_image = new Image();
-back_image.src = "/img/road.png";
+back_image.src = "img/road.png";

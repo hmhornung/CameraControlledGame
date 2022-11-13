@@ -5,19 +5,19 @@ class Obstacle{
     constructor(x,y){
         this.x = x;
         this.y = 100;
-        this.type = Math.random() * 3 + 1;
+        this.type = parseInt(Math.random() * 3 + 1);
         switch(this.type){
             case 1: // collision
-                this.length = math.random() * 500 + 1;
+                this.length = parseInt(Math.random() * 500 + 1);
                 break;
             case 2: // jump type
                 this.length = 50;
                 break;
             case 3: //duck
-                this.length = Math.random() * 150 + 1;
+                this.length = parseInt(Math.random() * 150 + 100);
                 break;
         }
-        this.length = 100;
+        //this.length = 100;
     }
     
     // constructor(x,y,type){
@@ -45,25 +45,13 @@ class Obstacle{
 
     print(){
         //console.log("called");
-        switch(this.type){
-            case 1: // collision
-                ctx.fillStyle = "green";
-                ctx.fillRect((this.x - 1) * (gameCanvas.width / 3), player.y - this.y, (gameCanvas.width / 3), this.length);
-                break;
-            case 2: // jump type
-                ctx.fillStyle = "green";
-                ctx.fillRect((this.x - 1) * (gameCanvas.width / 3), player.y - this.y, (gameCanvas.width / 3), this.length);
-                break;
-            case 3:
-                ctx.fillStyle = "green";
-                ctx.fillRect((this.x - 1) * (gameCanvas.width / 3), this.y - player.y, (gameCanvas.width / 3), this.length);
-                break;
-        }
+        
         ctx.fillStyle = "green";
-        console.log((this.x - 1) * (gameCanvas.width / 3));
+        //console.log((this.x - 1) * (gameCanvas.width / 3));
         console.log(player.y-this.y);
-        console.log((gameCanvas.width / 3));
+        //console.log((gameCanvas.width / 3));
         console.log(this.length);
+        console.log("type: " + this.type);
         ctx.fillRect((this.x - 1) * (gameCanvas.width / 3), player.y - this.y, (gameCanvas.width / 3), this.length);
     }
 
