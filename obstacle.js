@@ -19,6 +19,7 @@ class Obstacle{
         }
         this.length = 100;
     }
+    
     // constructor(x,y,type){
     //     this.x = x;
     //     this.y = y;
@@ -64,6 +65,15 @@ class Obstacle{
         console.log((gameCanvas.width / 3));
         console.log(this.length);
         ctx.fillRect((this.x - 1) * (gameCanvas.width / 3), player.y - this.y, (gameCanvas.width / 3), this.length);
+    }
+
+    getCollision(){
+        if(player.x != this.x){
+            return false;
+        }
+        else if (player.y >= this.y && player.y <= this.y + this.length){
+            return true;
+        }
     }
 
     
