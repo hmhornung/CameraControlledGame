@@ -8,7 +8,7 @@ class Segment{
     }
     print(){
         for(var i = 0; i < 10; i++){
-            console.log(this.obstacle[i]);
+            //console.log(this.obstacle[i]);
             this.obstacle[i].print();
         }
     }
