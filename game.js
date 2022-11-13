@@ -3,6 +3,9 @@ const gameCanvas = document.getElementsByClassName('game_canvas')[0];
 const ctx = gameCanvas.getContext('2d');
 
 var obs1 = new Obstacle(2,100);
+var segment1 = new Segment(1,true,false,0);
+var segment2 = new Segment(1,false,true,1);
+
 
 setInterval(function(){
     ctx.clearRect(0,0,gameCanvas.width,gameCanvas.height);
